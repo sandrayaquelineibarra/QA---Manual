@@ -2,7 +2,7 @@
 
 ## 1. Identificación
 - Proyecto: qa-manual-login
-- Aplicación bajo prueba: formulario de login "Acceso Estudiantes" de ITCA (www.itca.com.ar)
+- Aplicación bajo prueba: formulario de login "Acceso Estudiantes" de ITCA (www.itcaa.com.ar)
 - Responsable: Sandra Ibarra, QA Manual Tester
 - Versión del documento: 1.0
 
