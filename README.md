@@ -1,59 +1,63 @@
-# QA---Manual
-Pruebas funcionales de Login - itca
+# qa-manual-login
 
- # 1. Descripción
+Proyecto de QA Manual: pruebas funcionales de un formulario de inicio de sesión (login).
 
-Proyecto de QA manual realizado para practicar el proceso completo de testing sobre un formulario de inicio de sesión: planificación, diseño de casos, ejecución, reporte de defectos y regresión.
+## 1. Descripción
 
- # 2. Objetivo
+Proyecto realizado para practicar el proceso completo de testing manual sobre un login: planificación, diseño de casos de prueba, ejecución y reporte de defectos.
 
-Verificar que el login funcione correctamente con combinaciones de datos válidos e inválidos, y que el sistema valide los campos y los mensajes de error de forma adecuada.
+## 2. Objetivo
 
-# 3. Alcance
+Verificar que el login funcione correctamente con combinaciones de datos válidos e inválidos, y que los mensajes de error y el acceso al sistema se comporten como se espera.
 
-**Incluye:** autenticación con usuario y contraseña, validación de campos obligatorios, mensajes de error, enmascarado de contraseña, acceso a páginas protegidas y cierre de sesión.
+## 3. Alcance
 
-**No incluye:** recuperación de contraseña, registro de usuarios, pruebas de rendimiento ni de seguridad avanzada.
+- Incluido: formulario de login de "Acceso Estudiantes" de ITCA (www.itca.com.ar): usuario, contraseña, botón de ingreso, mensajes de error y acceso posterior.
+- No incluido: registro de usuarios, recuperación de contraseña, rendimiento y pruebas de seguridad intrusivas (el caso TC-LOGIN-012 queda documentado pero no se ejecuta sobre el sitio real).
 
-# 4. Tipos de pruebas
+## 4. Pruebas realizadas
 
-- Pruebas funcionales
-- Pruebas negativas
-- Pruebas de validación
-- Pruebas de regresión
+- Login con usuario y contraseña válidos.
+- Login con contraseña incorrecta.
+- Login con usuario incorrecto.
+- Campos obligatorios vacíos.
+- Validación de mensajes de error.
+- Validación de acceso al sistema.
+- Contraseña enmascarada, mayúsculas/minúsculas, espacios en el usuario, tecla Enter e intento básico de inyección SQL.
 
-# 5. Estructura del repositorio
+## 5. Tipos de pruebas
+
+- Funcionales
+- Negativas
+- De validación
+- De seguridad básica
+- De regresión
+
+## 6. Documentación
 
 | Carpeta / archivo | Contenido |
+| --- | --- |
+| `01-Plan-de-Pruebas/` | Plan de pruebas |
+| `02-Casos-de-Prueba/Casos-de-Prueba-Login.xlsx` | 15 casos de prueba, resumen de ejecución y hoja de reporte de bugs |
+| `04-Reporte-de-Bugs/` | Plantilla para reportar defectos |
+| `03-Evidencias/` | Capturas de pantalla de la ejecución |
 
-| 01-Plan-de-Pruebas/ | Plan de pruebas: alcance, estrategia y criterios |
-| 02-Casos-de-Prueba/casos-de-prueba-login.xlsx | 14 casos de prueba, reporte de bugs y resumen de ejecución |
-| 03-Evidencias/| Capturas de pantalla de la ejecución (un archivo por caso o bug) |
-| README.md | Este documento |
+## 7. Estructura de un caso de prueba
 
-# 6. Casos de prueba
+ID, tipo, prioridad, descripción, precondiciones, pasos, datos de prueba, resultado esperado, resultado obtenido, estado (Pasó / Falló / Bloqueado / Pendiente) y bug asociado.
 
-Los 14 casos cubren, entre otros, estos escenarios:
+## 8. Resultado
 
-- Login con usuario y contraseña válidos (CP-01)
-- Login con contraseña incorrecta (CP-02)
-- Login con usuario incorrecto (CP-03)
-- Campos obligatorios vacíos (CP-04 a CP-06)
-- Validación de mensajes de error (CP-07)
-- Contraseña enmascarada, espacios y mayúsculas/minúsculas (CP-08 a CP-10)
-- Envío con Enter, acceso sin sesión y cierre de sesión (CP-11 a CP-13)
-- Regresión (CP-14)
+Los resultados de la ejecución y los defectos encontrados se registran en el archivo Excel (hojas "Resumen" y "Reporte de bugs").
 
-# 7. Resultado
-
-[Completar tras ejecutar: cantidad de casos que pasaron, fallaron o quedaron bloqueados, y cantidad de bugs registrados. La hoja "Resumen" del Excel lo calcula automáticamente.]
-
-# 8. Herramientas
+## 9. Herramientas
 
 - GitHub
 - Excel
 - Navegador web
+- Testing manual
 
-# 9. Rol
+## 10. Rol
 
-QA Manual Tester: diseño y ejecución de casos de prueba, reporte de defectos y pruebas de regresión.
+QA Manual Tester: Sandra Ibarra
+
